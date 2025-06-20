@@ -1,0 +1,247 @@
+/* Basic reset and body styling */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-image: linear-gradient(to bottom right, #111827, #881337);
+    box-sizing: border-box;
+}
+
+/* Main container for the app */
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Wrapper for all content, providing structure and styling */
+.content-wrapper {
+    width: 100%;
+    max-width: 42rem; /* Corresponds to sm:max-w-2xl */
+    background-color: white;
+    border-radius: 1rem; /* rounded-2xl */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl */
+    padding: 1.5rem;
+    text-align: center;
+    border: 4px solid #b91c1c; /* border-4 border-red-700 */
+}
+
+/* Title styling */
+.title {
+    font-size: 2.25rem; /* text-3xl */
+    font-weight: 800; /* font-extrabold */
+    margin-bottom: 1.5rem;
+    color: #b91c1c; /* text-red-700 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.title-icon {
+    font-size: 3rem; /* text-5xl */
+}
+
+/* 'Predict' button container and styling */
+.predict-button-container {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.predict-button {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background-image: linear-gradient(to right, #dc2626, #991b1b); /* bg-gradient-to-r from-red-600 to-red-800 */
+    color: white;
+    font-weight: bold;
+    font-size: 1.125rem; /* text-lg */
+    border: none;
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.predict-button:hover {
+    background-color: #991b1b; /* hover:bg-red-700 */
+    transform: scale(1.05);
+}
+
+.predict-button:active {
+    background-color: #7f1d1d; /* active:bg-red-800 */
+}
+
+/* Dice display area */
+.dice-display {
+    border: 1px solid #d1d5db; /* border-gray-300 */
+    padding: 1rem;
+    border-radius: 0.5rem; /* rounded-lg */
+    background-color: #f9fafb; /* bg-gray-50 */
+    margin-bottom: 1rem;
+    min-height: 3rem;
+    max-height: 6rem;
+    overflow-y: auto;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05); /* shadow-inner */
+}
+
+.dice-display-title {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #dc2626; /* text-red-600 */
+}
+
+.dice-output-text {
+    margin: 0;
+    font-size: 1rem;
+    word-break: break-all;
+    color: #374151; /* text-gray-700 */
+}
+
+/* Result display */
+.result-display {
+    font-size: 3.75rem; /* text-6xl */
+    font-weight: 800; /* font-extrabold */
+    color: #111827; /* text-gray-900 */
+    margin-bottom: 1.5rem;
+}
+
+.result-icon {
+    font-size: 5rem; /* text-8xl */
+}
+
+/* Summary grid layout */
+.summary-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    color: #1f2937; /* text-gray-800 */
+}
+
+/* Individual summary boxes */
+.summary-box {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.total-count-box {
+    background-color: #dbeafe; /* bg-blue-100 */
+}
+
+.results-summary-box {
+    background-color: #f3f4f6; /* bg-gray-100 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.summary-title {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.summary-value {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: bold;
+}
+
+.total-count-value {
+    color: #1d4ed8; /* text-blue-700 */
+}
+
+.summary-details {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+}
+
+/* Text colors for summary */
+.banker-text { color: #15803d; } /* text-green-700 */
+.player-text { color: #7e22ce; } /* text-purple-700 */
+.tie-text { color: #ca8a04; } /* text-yellow-700 */
+
+/* Control buttons at the bottom */
+.controls-container {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.control-button {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    font-size: 1.125rem; /* text-lg */
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.control-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none; /* Disable scaling when disabled */
+    background-color: transparent; /* Ensure no hover bg color is stuck */
+}
+
+.back-button {
+    border: 2px solid #2563eb; /* border-blue-600 */
+    color: #2563eb;
+}
+
+.back-button:not(:disabled):hover {
+    background-color: #dbeafe; /* hover:bg-blue-100 */
+    transform: scale(1.05);
+}
+
+.reset-button {
+    border: 2px solid #dc2626; /* border-red-600 */
+    color: #dc2626;
+}
+
+.reset-button:hover {
+    background-color: #fee2e2; /* hover:bg-red-100 */
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (min-width: 640px) {
+    .content-wrapper {
+        padding: 1.5rem;
+    }
+    
+    .title {
+        font-size: 2.25rem;
+    }
+
+    .predict-button {
+        width: auto;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .total-count-box { grid-column: span 1; }
+    .results-summary-box { grid-column: span 1; }
+
+    .controls-container {
+        flex-direction: row;
+        gap: 1rem;
+    }
+}

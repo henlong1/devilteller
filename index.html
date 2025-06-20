@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>악마의 바카라 예언자</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main container for the application -->
+    <div class="main-container">
+        <!-- Content wrapper -->
+        <div class="content-wrapper">
+            <!-- Title -->
+            <h1 class="title">
+                <span class="title-icon">🧿</span> 악마의 바카라 예언자
+            </h1>
+
+            <!-- 'Predict' Button -->
+            <div class="predict-button-container">
+                <button id="roll-button" class="predict-button">
+                    예언하기
+                </button>
+            </div>
+
+            <!-- Dice display area -->
+            <div class="dice-display">
+                <p class="dice-display-title">🎲 악마의 조언 코드:</p>
+                <p id="dice-output" class="dice-output-text">아직 예언되지 않음</p>
+            </div>
+
+            <!-- Result display -->
+            <div id="result-display" class="result-display">
+                <span class="result-icon">👉</span> <span id="result-text"></span>
+            </div>
+
+            <!-- Counts and summary display grid -->
+            <div class="summary-grid">
+                <!-- Total Count -->
+                <div class="summary-box total-count-box">
+                    <div class="summary-title">총 예언 횟수:</div>
+                    <div id="total-count" class="summary-value total-count-value">0</div>
+                </div>
+                <!-- Results Summary -->
+                <div class="summary-box results-summary-box">
+                    <div class="summary-title">결과 요약:</div>
+                    <div class="summary-details">
+                        <span id="banker-summary" class="banker-text">BANKER: 0 (0 연속)</span>
+                        <span id="player-summary" class="player-text">PLAYER: 0 (0 연속)</span>
+                        <span id="tie-summary" class="tie-text">TIE: 0 (0 연속)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Control buttons container -->
+            <div class="controls-container">
+                <button id="back-button" class="control-button back-button">
+                    전 단계로
+                </button>
+                <button id="reset-button" class="control-button reset-button">
+                    리셋
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
